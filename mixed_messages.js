@@ -16,4 +16,13 @@ const quotes = {
 
 }
 
-console.log(quotes)
+const quotesGenerator = () => {
+    const author = Object.keys(quotes)[Math.round(Math.random() * 2)];
+    const quoteIdx = Math.round(Math.random() * 2);
+
+    const quote = quotes[author][quoteIdx];
+
+    return `${author} once said '${quote}'`;
+}
+
+console.log(quotesGenerator())
